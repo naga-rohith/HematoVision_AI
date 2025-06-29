@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to HematoVision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 40px 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      background-color: #e74c3c;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    h3 {
+      color: #c0392b;
+      margin-top: 0;
+    }
+    p {
+      color: #333;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    form {
+      margin-top: 30px;
+      text-align: center;
+    }
+    input[type="file"] {
+      padding: 8px;
+    }
+    button {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Welcome to the HematoVision</div>
+
+    <h3>About Blood Cells</h3>
+    <p>
+      Blood cells are vital components of our body, playing essential roles in immunity, oxygen transport, and clotting.
+      Understanding different types of blood cells is crucial for diagnosing various medical conditions.
+    </p>
+
+    <h3>Predict Blood Cell Type</h3>
+    <p>Upload an image of a blood cell to determine its type using our state-of-the-art classification model.</p>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" required>
+      <br>
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+</body>
+</html>
+
